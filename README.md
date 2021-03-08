@@ -25,3 +25,14 @@ To build this sample locally, you can either build using Docker, or using NPM.
 docker pull amazon/dynamodb-local
 
 docker run -p 8000:8000 amazon/dynamodb-local
+
+docker pull instructure/dynamo-local-admin
+
+docker run -p 8000:8000 -it --rm instructure/dynamo-local-admin
+
+docker run -d -p 127.0.0.1:8000:8000 amazon/dynamodb-local 
+
+Dynamo DB Config:- <br />
+aws dynamodb create-table --cli-input-json file:///Users/krjha/Documents/repo/mesj/cmpe282/config/tables/article.json --endpoint-url http://localhost:8000
+
+docker run -d -p 127.0.0.1:8000:8000 instructure/dynamo-local-admin
